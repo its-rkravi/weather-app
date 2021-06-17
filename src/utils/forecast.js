@@ -20,11 +20,26 @@ const forecast = (latitude, longitude, callback) => {
           body.current.temperature +
           " degrees out. It feels like " +
           body.current.feelslike +
-          " " +
-          body.current.weather_descriptions[0]
+          "" +
+          " degrees " +
+          body.current.weather_descriptions[0] +
+          " The Humidity is " +
+          body.current.humidity +
+          " and Pressure is " +
+          body.current.pressure
       );
     }
   });
 };
 
 module.exports = forecast;
+
+// callback(
+//   undefined,
+//   "Observation Time : " +
+//     body.current.observation_time +
+//     "Wind Speed :" +
+//     body.current.wind_speed +
+//     "Wind Degree :" +
+//     body.current.wind_degree
+// );
